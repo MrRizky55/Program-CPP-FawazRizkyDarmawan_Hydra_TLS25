@@ -29,6 +29,7 @@ int main(){
     asciiNum = toAscii;
     asciiToString = to_string(asciiNum);
     int i=0;
+    // Removing vocal characters
     while (i < word.length()){
         if (word[i] == 'a' || word[i] == 'i' || word[i] == 'u' || word[i] == 'e' || word[i] == 'o' || word[i] == 'A' || word[i] == 'I' || word[i] == 'U' || word[i] == 'E' || word[i] == 'O'){
             word.erase(i,1);
@@ -36,10 +37,11 @@ int main(){
         }
         i++;
     }
-    string code = reverse(word);
+    string code = reverse(word); //Reversing the word to make the code
     middlePoint = code.length()/2;
-    code.insert(middlePoint, asciiToString);
+    code.insert(middlePoint, asciiToString); //Inserting the ASCII code in the middle of the code 
     cout << code;
 
     return 0;
+
 }
