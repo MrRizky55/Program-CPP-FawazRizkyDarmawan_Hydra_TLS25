@@ -31,8 +31,8 @@ int main(){
     vector<char> sandi(sandiAwal.begin(), sandiAwal.end());
     vector<char> numbers;
     int x=0,y=0,z;
-    bool assignedX = false; //to mark wether x have been assigned or not
-    //Checking and getting the ASCII code numbers
+    bool assignedX = false; //to mark wether x has been assigned or not
+    //Checking and getting the ASCII code number
     for (int i=0; i < sandi.size(); i++) {
         if (sandi[i] == '1' ||sandi[i] ==  '2' ||sandi[i] == '3' ||sandi[i] == '4' ||sandi[i] == '5' ||sandi[i] == '6' ||sandi[i] == '7' ||sandi[i] == '8' ||sandi[i] == '9' ||sandi[i] == '0'){
             numbers.push_back(sandi[i]);
@@ -44,8 +44,8 @@ int main(){
         }
     }
 
-    if (y >= 1){ //Only run if there was any ASCII in the code. Adding the filter just in caase
-        //Converting mupltiple char to int
+    if (y >= 1){ //Only run if there was any ASCII in the code. Adding the filter just in case
+        //Converting mulptiple char to int
         for (int i=0; i < numbers.size(); i++){
             z = numbers[i] - '0';
             asciiCode += z*pow(10,(numbers.size()-i-1));
@@ -65,4 +65,5 @@ int main(){
     }
 
     return 0;
+
 }
